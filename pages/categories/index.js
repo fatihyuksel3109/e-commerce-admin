@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import { PenIcon, TrashIcon } from "@/public/icons/icons";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { withSwal } from "react-sweetalert2";
@@ -138,7 +139,7 @@ function Categories({ swal }) {
           <button
             onClick={addProperty}
             type="button"
-            className="btn-secondary mb-2"
+            className="btn-default mb-2"
           >
             Add new property
           </button>
@@ -207,17 +208,19 @@ function Categories({ swal }) {
                 <tr key={category.categoryName}>
                   <td>{category.categoryName}</td>
                   <td>{category?.parent?.categoryName}</td>
-                  <td>
+                  <td className="flex gap-2">
                     <button
                       onClick={() => editCategory(category)}
-                      className="btn-primary mr-1"
+                      className="btn-secondary"
                     >
+                      <PenIcon />
                       Edit
                     </button>
                     <button
                       onClick={() => deleteCategory(category)}
-                      className="btn-primary"
+                      className="btn-secondary"
                     >
+                      <TrashIcon />
                       Delete
                     </button>
                   </td>

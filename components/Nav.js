@@ -36,7 +36,7 @@ function Nav({ showMenu, closeMenu }) {
     >
       <div className=" mb-4 mr-4 flex justify-between">
         <Logo />
-        <div onClick={() => closeMenu(false)} className="sm:hidden">
+        <div onClick={() => closeMenu(false)} className="md:hidden">
           <CloseIcon />
         </div>
       </div>

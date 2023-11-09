@@ -116,17 +116,19 @@ function ProductForm({
       </select>
       {propertiesToFill.length > 0 &&
         propertiesToFill.map((p) => (
-          <div className="flex gap-1" key={p.name}>
-            <div>{p.name}</div>
-            <select
-              value={productProperties[p.name]}
-              onChange={(e) => productPropertyHandler(p.name, e.target.value)}
-              className="w-24"
-            >
-              {p.values.map((v) => (
-                <option key={v}>{v}</option>
-              ))}
-            </select>
+          <div key={p.name}>
+            <label>{p.name}</label>
+            <div>
+              <select
+                value={productProperties[p.name]}
+                onChange={(e) => productPropertyHandler(p.name, e.target.value)}
+                className="w-24"
+              >
+                {p.values.map((v) => (
+                  <option key={v}>{v}</option>
+                ))}
+              </select>
+            </div>
           </div>
         ))}
       <label>Photos</label>
@@ -139,8 +141,11 @@ function ProductForm({
           {!!images?.length &&
             images.map((link) => {
               return (
-                <div key={link} className="h-24 inline-block">
-                  <img src={link} alt="product" className="rounded-lg" />
+                <div
+                  key={link}
+                  className="h-24 inline-block bg-white p-3 shadow-sm border border-gray-300 rounded-md"
+                >
+                  <img src={link} alt="product" className="rounded-md" />
                 </div>
               );
             })}
@@ -151,8 +156,8 @@ function ProductForm({
             <Spinner />
           </div>
         )}
-        <label className="h-24 w-24 cursor-pointer flex flex-col items-center justify-center text-gray-600 bg-gray-200 rounded-lg">
-          <UploadIcon /> Upload
+        <label className="h-24 w-24 cursor-pointer flex flex-col items-center justify-center text-primary bg-white shadow-sm mx-2 border border-primary rounded-md">
+          <UploadIcon /> Add image
           <input onChange={UploadImages} type="file" className="hidden"></input>
         </label>
       </div>

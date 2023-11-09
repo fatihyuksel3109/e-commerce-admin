@@ -34,7 +34,7 @@ export default function Layout({ children }) {
       </div>
       <div className="bg-bgGray flex w-screen min-h-screen">
         <Nav showMenu={showMenu} closeMenu={setShowMenu} />
-        <div className="bg-white flex-grow mt-2 mr-2 p-4 rounded-lg">
+        <div className="flex-grow p-4 rounded-lg">
           {children}
         </div>
       </div>

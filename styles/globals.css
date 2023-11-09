@@ -23,7 +23,7 @@ label {
 }
 
 .btn-primary {
-  @apply bg-blue-500 text-white px-4 py-2 rounded-md;
+  @apply bg-blue-500 text-white py-1 px-4 font-semibold rounded-md;
 }
 .btn-primary:hover {
   @apply bg-blue-800;
@@ -34,16 +34,16 @@ table.basic {
 }
 table.basic thead tr td,
 table.basic thead tr th {
-  @apply text-sm text-gray-600 uppercase border-b border-gray-200 px-4 py-2;
+  @apply text-sm text-gray-600 uppercase border-b font-semibold border-gray-200 px-4 py-2 ;
 }
 table.basic tr td {
-  @apply px-4 py-1 border border-gray-200 mb-1;
+  @apply px-4 py-1 mb-1;
 }
 table.basic a {
-  @apply bg-blue-800 text-white rounded-md px-4 inline-flex mx-1 items-center gap-1 text-sm py-1;
+  @apply btn-secondary inline-flex;
 }
 table.basic a:hover {
-  @apply bg-blue-500;
+  @apply bg-blue-600;
 }
 .btn-default,
 .btn-red {
@@ -58,10 +58,10 @@ table.basic a:hover {
 }
 
 .btn-secondary {
-  @apply bg-blue-400 text-white text-sm px-2 py-2 rounded-lg border shadow-sm;
+  @apply bg-blue-500 mr-2 text-white text-sm px-2 py-1 rounded-lg border shadow-sm inline-flex items-center;
 }
 .btn-secondary:hover {
-  @apply bg-blue-500;
+  @apply bg-blue-600;
 }
 .btn-remove {
   @apply bg-red-400 text-white text-sm rounded-lg border shadow-sm mb-2 px-1;
@@ -75,7 +75,7 @@ table.basic a:hover {
 }
 
 .btn-red {
-  @apply bg-red-700 text-white;
+  @apply bg-red-600 text-white;
 }
 
 .btn-default {
